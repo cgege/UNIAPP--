@@ -249,10 +249,17 @@ export default {
       this.tabIndex = index;
       this.scrollInto = "tab" + index;
     },
+	
     // 监听滑动
     onChangeTab(e) {
       this.changeTab(e.detail.current);
     },
+	
+	onNavigationBarButtonTap(){
+		uni.navigateTo({
+			url:'../add-input/add-input'
+		})
+	}
   },
 };
 </script>
