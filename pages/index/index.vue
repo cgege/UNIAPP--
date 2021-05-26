@@ -171,6 +171,11 @@ export default {
       });
     }
   },
+  onNavigationBarSearchInputClicked() {
+  	uni.navigateTo({
+  		url:'../search/search'
+  	})
+  },
   methods: {
     loadmore(index) {
       //数据验证
