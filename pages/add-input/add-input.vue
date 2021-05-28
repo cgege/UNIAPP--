@@ -8,6 +8,8 @@
 		</uni-nav-bar>
 		<!-- 文本域 -->
 		<textarea v-model="content" placeholder="说一句话吧" class=" uni-textarea px-2"/>
+		<!-- 多图上传 -->
+		<upload-image @choose="choose"></upload-image>
 		<!-- 底部操作条 -->
 		<view class=" fixed-bottom bg-white flex align-center">
 			<view class="iconfont icon-caidan footer-bth animated " hover-class="jello"></view>
@@ -23,16 +25,24 @@
 </template>
 
 <script>
-	import uniNavBar from '@/components/uni-ui/uni-nav-bar/uni-nav-bar.vue'
-	
+	import uniNavBar from '@/components/uni-ui/uni-nav-bar/uni-nav-bar.vue';
+	import uploadImage from '@/components/common/upload-image.vue';
 	export default {
 		components: {
-			uniNavBar
+			uniNavBar,
+			uploadImage
 		},
 		data() {
 			return {
-				content:""
+				content:"",
+				imgaeList:[]
 			};
+		},
+		methods:{
+			choose(e){
+				this.imgaeList=e
+				
+			}
 		}
 	}
 </script>
