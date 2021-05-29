@@ -75,7 +75,7 @@ const demo = [
   },
   {
     username: "昵称2",
-    userpic: "/static/banner2.jpg",
+    userpic: "/static/default.jpg",
     newstime: "2020-05-24 上午 11：31",
     isFollow: false,
     title: "这是一个标题",

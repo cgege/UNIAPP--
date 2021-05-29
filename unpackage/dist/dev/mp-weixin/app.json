@@ -4,7 +4,9 @@
     "pages/news/news",
     "pages/msg/msg",
     "pages/my/my",
-    "components/common/common-list"
+    "components/common/common-list",
+    "pages/search/search",
+    "pages/add-input/add-input"
   ],
   "subPackages": [],
   "window": {
@@ -46,6 +48,8 @@
     ]
   },
   "usingComponents": {
-    "divider": "/components/common/divider"
-  }
+    "divider": "/components/common/divider",
+    "no-thing": "/components/common/no-thing"
+  },
+  "sitemapLocation": "sitemap.json"
 }
