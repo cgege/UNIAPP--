@@ -28,7 +28,30 @@
 		  <!-- 话题 -->
 		  <swiper-item >
 		    <scroll-view scroll-y="true" :style="'height:' + scrollH + 'px;'">
+					<!-- 热门分类 -->
 		  			<hot-cate :hotCate="hotCate"></hot-cate>
+					<!-- 搜索框 -->
+					<view class="p-2">
+						<view class="bg-light rounded flex align-center justify-center py-2 text-secondary">
+							<text class="iconfont icon-sousuo mr-2"></text>
+							搜索话题
+						</view>
+					</view>
+					<!-- 轮播图 -->
+					<swiper class="px-2 pb-2" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
+						<swiper-item>
+							<image src="@/static/demo/banner2.jpg" style="height: 300rpx; " class="w-100 rounded"></image>
+						</swiper-item>
+					</swiper>
+					<divider></divider>
+					<!-- 最近更新 -->
+					<view class="p-2 font-md">最近更新</view>
+					<!-- 话题列表组件 -->
+					<block v-for="(item,index) in topicList" :key="index">
+						<topic-list :item="item" :index="index"></topic-list>
+					</block>
+					
+					
 		    </scroll-view>
 		  </swiper-item>
 		</swiper>
@@ -87,13 +110,15 @@
 	import uniNavBar from '@/components/uni-ui/uni-nav-bar/uni-nav-bar.vue';
 	import commonList from '@/components/common/common-list.vue';
 	import loadMore from '@/components/common/loab-moer.vue';
-	import hotCate from '../../components/news/hot-cate.vue';
+	import hotCate from '@/components/news/hot-cate.vue';
+	import topicList from '@/components/news/topic-list.vue';
 	export default {
 		components: {
 			uniNavBar,
 			commonList,
 			loadMore,
-			hotCate
+			hotCate,
+			topicList
 		},
 		data() {
 			return {
@@ -119,6 +144,44 @@
 					{
 						name:"体育"
 					}
+				],
+				topicList:[
+					{
+						cover:"/static/demo/topicpic/1.jpeg",
+						title:"话题名称",
+						desc:"话题描述",
+						today_count:0,
+						news_count:10,
+						
+					},
+					
+					{
+						cover:"/static/demo/topicpic/1.jpeg",
+						title:"话题名称",
+						desc:"话题描述",
+						today_count:0,
+						news_count:10,
+						
+					},
+					{
+						cover:"/static/demo/topicpic/1.jpeg",
+						title:"话题名称",
+						desc:"话题描述",
+						today_count:0,
+						news_count:10,
+						
+					},
+					{
+						cover:"/static/demo/topicpic/1.jpeg",
+						title:"话题名称",
+						desc:"话题描述",
+						today_count:0,
+						news_count:10,
+						
+					},
+					
+					
+					
 				]
 				
 			};
