@@ -220,7 +220,7 @@ export default {
           title: "关注成功",
         });
       }
-      console.log(this.newList[0].list[e]);
+      // console.log(this.newList[0].list[e]);
     },
     doSupport(e) {
       let item = this.newList[0].list[e.index];

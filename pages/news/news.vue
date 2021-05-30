@@ -15,6 +15,7 @@
 		<swiper
 		  :duration="150":style="'height:' + scrollH + 'px;'">
 		  <swiper-item>
+			  <!-- 话题 -->
 		  	<scroll-view scroll-y="true" :style="'height:'+scrollH+'px;'" @scrolltolower="loadMoreEvent()">
 				
 		  		<block v-for="(item,index) in list " :key="index">
@@ -24,18 +25,10 @@
 		  		<load-more :loadmore="loadMore"></load-more>
 		  	</scroll-view>
 		  </swiper-item>
-		  <!-- 关注 -->
-		  <swiper-item >
-		    
-		  </swiper-item>
 		  <!-- 话题 -->
 		  <swiper-item >
-		    <scroll-view
-		      scroll-y="true"
-		      :style="'height:' + scrollH + 'px;'">
-		  		<view class="">
-		  			话题
-		  		</view>			
+		    <scroll-view scroll-y="true" :style="'height:' + scrollH + 'px;'">
+		  			<hot-cate :hotCate="hotCate"></hot-cate>
 		    </scroll-view>
 		  </swiper-item>
 		</swiper>
@@ -94,12 +87,13 @@
 	import uniNavBar from '@/components/uni-ui/uni-nav-bar/uni-nav-bar.vue';
 	import commonList from '@/components/common/common-list.vue';
 	import loadMore from '@/components/common/loab-moer.vue';
-	
+	import hotCate from '../../components/news/hot-cate.vue';
 	export default {
 		components: {
 			uniNavBar,
 			commonList,
-			loadMore
+			loadMore,
+			hotCate
 		},
 		data() {
 			return {
@@ -115,7 +109,17 @@
 				],
 				list:[],
 				loadMore: '上拉加载更多...',
-				
+				hotCate:[
+					{
+						name:"关注"
+					},
+					{
+						name:"推荐"
+					},
+					{
+						name:"体育"
+					}
+				]
 				
 			};
 		},
