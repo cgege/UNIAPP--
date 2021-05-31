@@ -20,7 +20,10 @@
 		props:['hotCate'],
 		methods:{
 			openMore(){
-				
+				uni.navigateTo({
+					url: '../../pages/topic-nav/topic-nav',
+					
+				});
 			},
 			openDetali(item){
 				

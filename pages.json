@@ -104,6 +104,14 @@
             }
             
         }
+        ,{
+            "path" : "pages/topic-nav/topic-nav",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "话题分类"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
