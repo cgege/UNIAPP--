@@ -50,8 +50,6 @@
 					<block v-for="(item,index) in topicList" :key="index">
 						<topic-list :item="item" :index="index"></topic-list>
 					</block>
-					
-					
 		    </scroll-view>
 		  </swiper-item>
 		</swiper>
