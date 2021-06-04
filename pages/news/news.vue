@@ -13,7 +13,8 @@
 		
 		<!-- 滑块 -->
 		<swiper
-		  :duration="150":style="'height:' + scrollH + 'px;'">
+		  :duration="150" :style="'height:' + scrollH + 'px;'"   :current="tabIndex"
+      @change="onChangeTab">
 		  <swiper-item>
 			  <!-- 话题 -->
 		  	<scroll-view scroll-y="true" :style="'height:'+scrollH+'px;'" @scrolltolower="loadMoreEvent()">
@@ -206,11 +207,20 @@
 				this.tabIndex=index
 				
 			},
-			// 滑动
+			// // 滑动
 			onChangeTab(index){
+					this.tabIndex=index.detail.current
+				// this.changeTab(e.detail.current)
 				
-				this.tabIndex=index.detail.current
 			},
+			// 	changeTab(e) {
+			// 	this.tabIndex = e
+			// },
+			// 监听滑动
+			// onChangeTab(e) {
+			// 	console.log(e.detail.current)
+			// 	this.changeTab(e.detail.current)
+			// },
 			// 顶踩操作
 			doSupport(e) {
 			  let item = this.list[e.index];
