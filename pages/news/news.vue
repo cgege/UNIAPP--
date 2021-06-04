@@ -204,10 +204,12 @@
 			},
 			changeTab(index){
 				this.tabIndex=index
+				
 			},
 			// 滑动
-			onChangeTab(e){
-				this.tabIndex=e.detail.current
+			onChangeTab(index){
+				
+				this.tabIndex=index.detail.current
 			},
 			// 顶踩操作
 			doSupport(e) {
