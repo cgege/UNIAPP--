@@ -1,173 +1,171 @@
 {
-	"pages": [ 
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "首页",
-				"app-plus":{
-					"titleNView":{
-						"searchInput":{
-							"align":"center",
-							"backgroundColor":"#F5F4F2",
-							"borderRadius":"4px",
-							"disabled":true,
-							"placeholder":"搜索帖子",
-							"placeholderColor":"#6d6c67"
-						},
-						"buttons":[
-							{
-								"color":"#333333",
-								"colorPressed":"#fd597c",
-								"float":"right",
-								"fontSize":"20px",
-								"fontSrc":"/static/iconfont.ttf",
-								"text":"\ue668"
-							}
-						]
-					}
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "首页",
+			
+			"app-plus": {
+				"titleNView": {
+					"searchInput": {
+						"align": "center",
+						"backgroundColor": "#F5F4F2",
+						"borderRadius": "4px",
+						"disabled": true,
+						"placeholder": "搜索帖子",
+						"placeholderColor": "#6d6c67"
+					},
+					"buttons": [{
+						"color": "#333333",
+						"colorPressed": "#fd597c",
+						"float": "right",
+						"fontSize": "20px",
+						"fontSrc": "/static/iconfont.ttf",
+						"text": "\ue668"
+					}]
 				}
 			}
-			
 		}
-	    ,{
-            "path" : "pages/news/news",
-            "style" :                                                                                    
-            {
-                "app-plus":{
-					"titleNView":false
+
+	}, {
+		"path": "pages/news/news",
+		"style": {
+			"app-plus": {
+				"titleNView": false
+			}
+		}
+
+	}, {
+		"path": "pages/msg/msg",
+		"style": {
+			"navigationBarTitleText": "信息列表",
+			"enablePullDownRefresh":true,
+			"app-plus": {
+				"titleNView": {
+
+					"buttons": [{
+							"color": "#333333",
+							"colorPressed": "#fd597c",
+							"float": "left",
+							"fontSize": "20px",
+							"fontSrc": "/static/iconfont.ttf",
+							"text": "\ue611"
+						},
+						{
+							"color": "#333333",
+							"colorPressed": "#fd597c",
+							"float": "right",
+							"fontSize": "20px",
+							"fontSrc": "/static/iconfont.ttf",
+							"text": "\ue649"
+						}
+					]
 				}
-            }
-            
-        }
-        ,{
-            "path" : "pages/msg/msg",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "信息",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/my/my",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "我的",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "components/common/common-list",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/search/search",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "app-plus":{
-                	"titleNView":{
-                		"searchInput":{
-                			"align":"center",
-                			"backgroundColor":"#F5F4F2",
-                			"borderRadius":"4px",
-                			"placeholder":"搜索帖子",
-                			"placeholderColor":"#6d6c67"
-                		},
-                		"buttons":[
-                			{
-                				"color":"#333333",
-                				"colorPressed":"#fd597c",
-                				"float":"right",
-                				"fontSize":"14px",
-                				"text":"搜索"
-                			}
-                		]
-                	}
-                }
-            }
-            
-        }
-        ,{
-            "path" : "pages/add-input/add-input",
-            "style" :                                                                                    
-            {
-               "app-plus":{
-				   "titleNView":false
-			   }
-            }
-            
-        }
-        ,{
-            "path" : "pages/topic-nav/topic-nav",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "话题分类"
-            }
-            
-        }
-        ,{
-            "path" : "pages/topic-detail/topic-detail",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"app-plus":{
-					"titleNView":{
-						"type":"transparent",
-						"buttons":[
-							{
-								"type":"menu"
-							}
-						]
-					}
+			}
+		}
+
+	}, {
+		"path": "pages/my/my",
+		"style": {
+			"navigationBarTitleText": "我的",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "components/common/common-list",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/search/search",
+		"style": {
+			"navigationBarTitleText": "",
+			"app-plus": {
+				"titleNView": {
+					"searchInput": {
+						"align": "center",
+						"backgroundColor": "#F5F4F2",
+						"borderRadius": "4px",
+						"placeholder": "搜索帖子",
+						"placeholderColor": "#6d6c67"
+					},
+					"buttons": [{
+						"color": "#333333",
+						"colorPressed": "#fd597c",
+						"float": "right",
+						"fontSize": "14px",
+						"text": "搜索"
+					}]
 				}
-				
-            }
-            
-        }
-    ],
+			}
+		}
+
+	}, {
+		"path": "pages/add-input/add-input",
+		"style": {
+			"app-plus": {
+				"titleNView": false
+			}
+		}
+
+	}, {
+		"path": "pages/topic-nav/topic-nav",
+		"style": {
+			"navigationBarTitleText": "话题分类"
+		}
+
+	}, {
+		"path": "pages/topic-detail/topic-detail",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false,
+			"app-plus": {
+				"titleNView": {
+					"type": "transparent",
+					"buttons": [{
+						"type": "menu"
+					}]
+				}
+			}
+
+		}
+
+	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "社区交友",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"tabBar":{
-		"color":"#323232",
-		"selectedColor":"#fc5c82",
-		"backgroundColor":"#FFFFFF",
-		"borderStyle":"black",
-		"list":[
-			{
-				"pagePath":"pages/index/index",
-				"text":"首页",
-				"iconPath":"static/tabbar/home.png",
-				"selectedIconPath":"static/tabbar/indexed.png"
+	"tabBar": {
+		"color": "#323232",
+		"selectedColor": "#fc5c82",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/indexed.png"
 			},
 			{
-				"pagePath":"pages/news/news",
-				"text":"动态",
-				"iconPath":"static/tabbar/news.png",
-				"selectedIconPath":"static/tabbar/newsed.png"
+				"pagePath": "pages/news/news",
+				"text": "动态",
+				"iconPath": "static/tabbar/news.png",
+				"selectedIconPath": "static/tabbar/newsed.png"
 			},
 			{
-				"pagePath":"pages/msg/msg",
-				"text":"信息",
-				"iconPath":"static/tabbar/paper.png",
-				"selectedIconPath":"static/tabbar/papered.png"
+				"pagePath": "pages/msg/msg",
+				"text": "信息",
+				"iconPath": "static/tabbar/paper.png",
+				"selectedIconPath": "static/tabbar/papered.png"
 			},
 			{
-				"pagePath":"pages/my/my",
-				"text":"我的",
-				"iconPath":"static/tabbar/home.png",
-				"selectedIconPath":"static/tabbar/homeed.png"
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/homeed.png"
 			}
 		]
 	}
