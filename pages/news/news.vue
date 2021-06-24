@@ -213,15 +213,7 @@
 				// this.changeTab(e.detail.current)
 				
 			},
-			// 	changeTab(e) {
-			// 	this.tabIndex = e
-			// },
-			// 监听滑动
-			// onChangeTab(e) {
-			// 	console.log(e.detail.current)
-			// 	this.changeTab(e.detail.current)
-			// },
-			// 顶踩操作
+		
 			doSupport(e) {
 			  let item = this.list[e.index];
 			  let msg = e.type === "support" ? "点赞" : "反对";

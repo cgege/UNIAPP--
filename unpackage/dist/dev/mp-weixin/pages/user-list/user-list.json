@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "loab-moer": "/components/common/loab-moer",
+    "nothing": "/components/common/no-thing",
+    "uni-badge": "/components/uni-ui/uni-badge/uni-badge"
+  }
+}

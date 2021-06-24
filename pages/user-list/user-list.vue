@@ -19,11 +19,22 @@
 					<!-- 文章列表 -->
 					<template v-if="item.list.length > 0">
 						<block v-for="(item2, index2) in item.list" :key="index2">
-							<view class="">123</view>
-							<divider></divider>
+							<!-- 列表样式 -->
+							<view class="p-2 flex align-center border-bottom border-light-secondary">
+								<image style="height: 100rpx; width: 100rpx;" class="rounded-circle mr-2" src="@/static/default.jpg" mode=""></image>
+								<view class="flex flex-column flex-1">
+									<text class="font-md text-dark">昵称</text>
+									<uni-badge text="24" type="error" size="small">
+										<text class="iconfont icon-nv text-white font-sm " style="margin-right: 5rpx;"></text>
+									</uni-badge>
+								</view>
+								<view class="uni-icon uni-icon-checkbox-filled text-light-muted"></view>
+							</view>
+							
 						</block>
 						<!-- 上拉加载 -->
-						<load-more :loadmore="item.loadMore"></load-more>
+						<loab-moer :loadmore="item.loadMore"></loab-moer>
+						
 					</template>
 					<template v-else>
 						<no-thing></no-thing>
@@ -37,10 +48,12 @@
 <script>
 import loabMoer from '@/components/common/loab-moer.vue';
 import nothing from '@/components/common/no-thing.vue';
+import uniBadge from '@/components/uni-ui/uni-badge/uni-badge.vue';
 export default {
 	components: {
 		loabMoer,
-		nothing
+		nothing,
+		uniBadge
 	},
 	data() {
 		return {

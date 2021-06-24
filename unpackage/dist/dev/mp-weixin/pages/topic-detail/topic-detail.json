@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "topiic-info": "/components/topiic-detail/topiic-info",
+    "common-list": "/components/common/common-list",
+    "no-thing": "/components/common/no-thing",
+    "loab-moer": "/components/common/loab-moer"
+  }
+}
