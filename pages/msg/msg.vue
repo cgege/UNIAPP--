@@ -81,6 +81,10 @@
 		onNavigationBarButtonTap(e) {
 			switch(e.index){
 				case 0:
+				uni.navigateTo({
+					url: '../user-list/user-list',
+					
+				});
 				this.$refs.popup.close()
 					break;
 				case 1:
@@ -107,6 +111,7 @@
 			popupEvent(e){
 				switch (e){
 					case 'friend':
+					
 						break;
 					case 'cleak':
 					console.log(123)

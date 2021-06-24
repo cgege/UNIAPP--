@@ -115,7 +115,7 @@ export default {
     return {
       newList: [],
       tabIndex: 0,
-      scrollH: 800,
+      scrollH: 600,
       scrollInto: "",
       tablist: [
         {
@@ -151,7 +151,7 @@ export default {
   onLoad() {
     uni.getSystemInfo({
       success: (res) => {
-        this.scrollH = res.windowHeight - uni.upx2px(100);
+        this.scrollH = res.windowHeight - uni.upx2px(101);
         // console.log(this.scrollH)
       },
     }),
