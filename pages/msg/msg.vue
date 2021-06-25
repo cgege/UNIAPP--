@@ -3,7 +3,7 @@
 		<template v-if="list.length>0">
 			<!-- 信息列表 -->
 			<block v-for="(item,index) in list" :key='index'>
-				<msg-list :item="item" :index="index"></msg-list>
+				<msg-list :item="item" :index="index" ></msg-list>
 			</block>
 		</template>
 		<template v-else>

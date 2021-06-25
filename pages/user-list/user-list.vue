@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view class=" flex align-center py-2">
+		<view class=" flex align-center " style="height: 100rpx;">
 			<view
 				class="flex-1 flex align-center justify-center "
 				v-for="(item, index) in tabBars"
@@ -20,20 +20,11 @@
 					<template v-if="item.list.length > 0">
 						<block v-for="(item2, index2) in item.list" :key="index2">
 							<!-- 列表样式 -->
-							<view class="p-2 flex align-center border-bottom border-light-secondary">
-								<image style="height: 100rpx; width: 100rpx;" class="rounded-circle mr-2" src="@/static/default.jpg" mode=""></image>
-								<view class="flex flex-column flex-1">
-									<text class="font-md text-dark">昵称</text>
-									<uni-badge text="24" type="error" size="small">
-										<text class="iconfont icon-nv text-white font-sm " style="margin-right: 5rpx;"></text>
-									</uni-badge>
-								</view>
-								<view class="uni-icon uni-icon-checkbox-filled text-light-muted"></view>
-							</view>
+							<user-list :item="item2" :index="index"></user-list>
 							
 						</block>
 						<!-- 上拉加载 -->
-						<loab-moer :loadmore="item.loadMore"></loab-moer>
+						<loab-moer v-if="item.list.length>10" :loadmore="item.loadMore"></loab-moer>
 						
 					</template>
 					<template v-else>
@@ -46,14 +37,30 @@
 </template>
 
 <script>
+	const demo =[
+		{
+			avatar:"/static/default.jpg",
+			username:"昵称",
+			sex:1,
+			age:24,
+			isFollow:true
+		},
+		{
+			avatar:"/static/default.jpg",
+			username:"昵称",
+			sex:2,
+			age:24,
+			isFollow:false
+		}
+	];
 import loabMoer from '@/components/common/loab-moer.vue';
 import nothing from '@/components/common/no-thing.vue';
-import uniBadge from '@/components/uni-ui/uni-badge/uni-badge.vue';
+import userList from '@/components/user-list/user-list.vue';
 export default {
 	components: {
 		loabMoer,
 		nothing,
-		uniBadge
+		userList
 	},
 	data() {
 		return {
@@ -90,7 +97,7 @@ export default {
 	onLoad() {
 		uni.getSystemInfo({
 			success: res => {
-				this.scrollH = res.windowHeight - uni.upx2px(101);
+				this.scrollH = res.windowHeight - uni.upx2px(100);
 				// console.log(this.scrollH)
 			}
 		});
@@ -106,7 +113,7 @@ export default {
 				};
 				if (i < 2) {
 					obj = {
-						list: [1, 2, 3],
+						list: demo,
 						loadMore: '上拉加载更多...'
 					};
 				}

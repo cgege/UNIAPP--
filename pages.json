@@ -162,6 +162,47 @@
             }
             
         }
+        ,{
+            "path" : "pages/user-chat/user-chat",
+            "style" :                                                                                    
+            {
+               
+                "app-plus":{
+					"bounce":"none",
+					"titleNView":{
+						"buttons":[
+							{
+								"color": "#333333",
+								"colorPressed": "#fd597c",
+								"float": "right",
+								"fontSize": "20px",
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue628"
+							}
+						]
+					}
+				}
+            }
+            
+        }
+        ,{
+            "path" : "components/user-chat/user-chat-list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/user-chat/user-chat-list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
