@@ -5,7 +5,7 @@
 		<!-- 信息气泡 -->
 		<view class="flex align-start px-2 my-2" :style="isSelf ? 'flex-direction: row-reverse' : ''">
 			<image :src="item.avatar" style="width: 100rpx; height: 100rpx;" class="rounded-circle" mode=""></image>
-			<view class="bg-light p-2 rounded mx-2" style="max-width: 400rpx; min-height: 100rpx;">
+			<view class="bg-light p-2 rounded mx-2" style="max-width: 400rpx; ">
 				{{ item.data }}
 			</view>
 		</view>
